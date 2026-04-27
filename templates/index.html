@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Study Planner</title>
+</head>
+<body>
+
+<h1>AI Study Planner</h1>
+
+<form method="POST">
+    <label>Subject:</label><br>
+    <input type="text" name="subject"><br><br>
+
+    <label>Days Left:</label><br>
+    <input type="number" name="days"><br><br>
+
+    <label>Level:</label><br>
+    <select name="level">
+        <option>Beginner</option>
+        <option>Intermediate</option>
+    </select><br><br>
+
+    <label>Hours per day:</label><br>
+    <input type="number" name="hours"><br><br>
+
+    <label>Syllabus:</label><br>
+    <textarea name="syllabus"></textarea><br><br>
+
+    <button type="submit">Generate Plan</button>
+</form>
+
+{% if plan %}
+<h2>Your Study Plan:</h2>
+<pre>{{ plan }}</pre>
+{% endif %}
+
+</body>
+</html>
